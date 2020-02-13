@@ -1,0 +1,14 @@
+<ul class="cols_<?= $this->perRow ?>" itemscope itemtype="http://schema.org/ImageGallery">
+  <?php foreach ($this->body as $class=>$row): ?>
+    <?php foreach ($row as $col): ?>
+      <?php if ($col->addImage): ?>
+        <li class="<?= $class ?> <?= $col->class ?>">
+          <figure class="image_container"<?php if ($col->margin): ?> style="<?= $col->margin ?>"<?php endif; ?>>
+              <?php $this->insert('picture_default', $col->picture); ?>
+          <figcaption class="caption"><span class="figcaption-span"><?= $col->imageTitle ?></span></figcaption>
+          </figure>
+        </li>
+      <?php endif; ?>
+    <?php endforeach; ?>
+  <?php endforeach; ?>
+</ul>

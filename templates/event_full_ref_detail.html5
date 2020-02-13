@@ -1,0 +1,33 @@
+<section id="<?= $this->alias ?>" class="ce_accordionStart ce_accordion block<?= $this->class ?>" role="tablist">
+  <div class="toggler" aria-expanded="false" role="tab" tabindex="0">
+    <?= $this->title ?>
+  </div>
+  <div class="accordion" style="padding-top: 0px; border-top: medium none; padding-bottom: 0px; border-bottom: medium none; overflow: hidden; height: 0px;" aria-hidden="true" role="tabpanel">
+    <div>
+      <div class="ce_text block">
+        <div class="accordion-text-wrapper">
+          <h4><?= $this->title ?></h4>
+
+          <?php if ($this->addBefore): ?>
+          <div class="ce_text block short-desc"><?= $this->teaser ?></div>
+          <?php endif; ?>
+
+          <?php if ($this->hasDetails): ?>
+            <?= $this->details ?>
+            <?php else: ?>
+                <?php if (!$this->addBefore): ?>
+                  <?= $this->teaser ?>
+                <?php endif; ?>
+                <?php if ($this->location): ?>
+                  <p class="location"><?= $this->locationLabel ?>: <?= $this->location ?></p>
+                <?php endif; ?>
+
+          <?php endif; ?>
+        </div>
+        <?php if ($this->addImage): ?>
+          <?php $this->insert('image', $this->arrData); ?>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+</section>

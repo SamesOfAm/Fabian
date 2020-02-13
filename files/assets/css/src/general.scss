@@ -1,0 +1,28 @@
+@import 'variables';
+
+@font-face {
+  font-family: 'Nunito Sans', sans-serif;
+  src: url("../fonts/NunitoSans-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nunito Sans', sans-serif;
+  src: url("../fonts/NunitoSans-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nunito Sans', sans-serif;
+  src: url("../fonts/NunitoSans-Italic.woff") format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+@import 'header';
+@import 'footer';
+@import 'main';

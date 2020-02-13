@@ -1,0 +1,149 @@
+@import 'variables';
+
+#footer {
+  height: 500px;
+  background: url("../layout/footer.png") no-repeat bottom center/cover;
+  color: white;
+  .inside {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+    > div:not(:first-child), nav {
+      width: 50%;
+    }
+  }
+  h3 {
+    margin-top: 17px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    font-weight: normal;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  h3,p {
+    padding-left: 30px;
+  }
+}
+
+.logo-footer {
+  position: absolute;
+  top: -56px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 125px;
+  height: 125px;
+  figure {
+    width: 125px;
+    height: 125px;
+    img {
+      position: relative;
+      top: 10px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      box-shadow: 0 0 10px #8e8e8e;
+    }
+  }
+}
+
+.footer-info-wrapper {
+  position: relative;
+  width: 60%;
+  float: right;
+  margin-right: 50px;
+  p:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 20px;
+  }
+  p:nth-child(2):before {
+    background: url("../layout/locator.svg") no-repeat;
+  }
+}
+
+.footer-tel {
+  position: relative;
+  &:before {
+    background: url("../layout/phone.svg") no-repeat;
+    top: 3px;
+  }
+}
+
+.footer-mail {
+  position: relative;
+  &:before {
+    background: url("../layout/mail.svg") no-repeat;
+    top: 6px;
+  }
+}
+
+#footer .footer-tel a, #footer .footer-mail a {
+  transition: all 250ms;
+  &:hover {
+    color: $primary-color-light;
+  }
+}
+
+.footer-nav-wrapper {
+  width: 60%;
+  margin-left: 50px;
+  text-transform: uppercase;
+  ul li {
+    padding: 17px 0 10px;
+    &:not(:last-child) {
+      border-bottom: 1px solid;
+    }
+    a {
+      transition: all 250ms;
+      &:hover {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $smartphone) {
+  #footer {
+    background: url("../layout/footer-bg.png") no-repeat top center/cover;
+    .inside {
+      display: initial;
+    }
+  }
+
+  .logo-footer {
+    position: relative;
+    top: 25px;
+    width: 170px;
+    height: 180px;
+  }
+
+  .logo-footer figure {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #footer .inside > div:not(:first-child), #footer .inside nav {
+    width: 100%;
+  }
+
+  #footer {
+    height: 750px;
+  }
+
+  .footer-info-wrapper {
+    width: 80%;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .footer-nav-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
