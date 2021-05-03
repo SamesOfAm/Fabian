@@ -24,9 +24,6 @@
 
           <?php endif; ?>
         </div>
-        <?php if ($this->addImage): ?>
-          <?php $this->insert('image', $this->arrData); ?>
-        <?php endif; ?>
       </div>
     </div>
   </div>

@@ -261,8 +261,11 @@ ul {
   > div > .ce_text > figure {
     margin: 5px;
   }
-  .accordion-text-wrapper > .ce_text > p {
-    margin-left: 30px;
+  .accordion-text-wrapper > .ce_text {
+    padding-right: 30px;
+    > p {
+      margin-left: 30px;
+    }
   }
 }
 
@@ -327,6 +330,32 @@ ul {
   background-color: $primary-color;
   padding: 7px 15px;
   color: white;
+}
+
+.ce_sliderStart {
+  position: relative;
+}
+
+.slider-control {
+  position: absolute;
+  top: 50%;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  a {
+    position: absolute;
+    top: 9px;
+    display: inline-block;
+    color: #e75300;
+    font-size: 35px;
+    text-decoration: none;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 0 0 10px #333;
+  }
 }
 
 @media screen and (max-width: 1400px) {
